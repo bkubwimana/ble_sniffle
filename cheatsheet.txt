@@ -1,0 +1,24 @@
+PDU Type Name		Value
+ADV_IND	0
+ADV_DIRECT_IND		1
+ADV_NONCONN_IND		2
+ADV_SCAN_IND		6
+SCAN_REQ			3
+CONNECT_REQ			5
+
+Apple MAC 72:70:30:1b:61:ca
+		  6c:c2:e4:64:19:f1
+		  49:85:2c:ac:e1:18
+		  5d:7f:48:e1:ac:be
+		  
+Not apple but scans everyone
+		  7f:7d:fa:63:7f:57
+		  
+		  
+		  
+filters:
+		btle.advertising_header.pdu_type==5
+		
+./sniff_receiver.exe -le -c 38 -s COM4
+
+./sniffle_extcap.bat --capture --extcap-interface sniffle --fifo out.pcap --serport COM4 --mode passive_scan --advchan 38 --rssi -5

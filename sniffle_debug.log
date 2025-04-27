@@ -1,0 +1,69 @@
+2025-04-22 00:27:26 INFO     Opening control-out FIFO
+2025-04-22 00:27:26 INFO     Opening control-in FIFO
+2025-04-22 00:27:26 INFO     Opening capture output FIFO
+2025-04-22 00:27:26 INFO     Starting control thread
+2025-04-22 00:27:26 INFO     Control thread started
+2025-04-22 00:27:26 INFO     Waiting for INITIALIZED message from Wireshark
+2025-04-22 00:27:26 INFO     Control message received: 0 0
+2025-04-22 00:27:26 INFO     Initializing Sniffle hardware interface
+2025-04-22 00:28:49 INFO     Control thread exiting
+2025-04-22 00:31:16 INFO     Opening capture output FIFO
+2025-04-22 00:31:16 ERROR    INTERNAL ERROR
+Traceback (most recent call last):
+  File "C:\Program Files\Wireshark\extcap\sniffle_extcap.py", line 105, in main
+    self.open_pipes()
+  File "C:\Program Files\Wireshark\extcap\sniffle_extcap.py", line 445, in open_pipes
+    self.captureStream = open(self.args.fifo, 'wb', buffering=0)
+PermissionError: [Errno 13] Permission denied: 'foo.pcap'
+2025-04-22 00:31:50 INFO     Opening capture output FIFO
+2025-04-22 00:31:50 INFO     Initializing Sniffle hardware interface
+2025-04-22 00:31:50 ERROR    INTERNAL ERROR
+Traceback (most recent call last):
+  File "C:\Program Files\Wireshark\extcap\sniffle_extcap.py", line 121, in main
+    self.capture()
+  File "C:\Program Files\Wireshark\extcap\sniffle_extcap.py", line 369, in capture
+    self.hw = SniffleHW(self.args.serport, logger=logging.getLogger('sniffle_hw'))
+  File "C:\Program Files\Wireshark\extcap\sniffle\sniffle_hw.py", line 106, in __init__
+    self.ser = Serial(serport, baud, timeout=timeout)
+  File "C:\Users\Benja\AppData\Local\Programs\Python\Python310\lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Benja\AppData\Local\Programs\Python\Python310\lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\Users\Benja\AppData\Local\Programs\Python\Python310\lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+2025-04-22 00:31:59 INFO     Opening capture output FIFO
+2025-04-22 00:31:59 INFO     Initializing Sniffle hardware interface
+2025-04-22 00:31:59 INFO     Starting capture
+2025-04-22 00:32:24 INFO     Capture stopped
+2025-04-22 16:05:12 INFO     Opening capture output FIFO
+2025-04-22 16:05:12 INFO     Initializing Sniffle hardware interface
+2025-04-22 16:05:12 INFO     Starting capture
+2025-04-22 16:05:26 INFO     Capture stopped
+2025-04-22 17:15:59 INFO     Opening capture output FIFO
+2025-04-22 17:15:59 INFO     Initializing Sniffle hardware interface
+2025-04-22 17:16:00 INFO     Starting capture
+2025-04-22 17:20:00 INFO     Opening capture output FIFO
+2025-04-22 17:20:00 ERROR    INTERNAL ERROR
+Traceback (most recent call last):
+  File "C:\Program Files\Wireshark\extcap\sniffle_extcap.py", line 105, in main
+    self.open_pipes()
+  File "C:\Program Files\Wireshark\extcap\sniffle_extcap.py", line 445, in open_pipes
+    self.captureStream = open(self.args.fifo, 'wb', buffering=0)
+PermissionError: [Errno 13] Permission denied: 'out1.pcap'
+2025-04-22 17:20:41 INFO     Opening capture output FIFO
+2025-04-22 17:20:41 INFO     Initializing Sniffle hardware interface
+2025-04-22 17:20:42 INFO     Starting capture
+2025-04-22 17:27:42 INFO     Opening capture output FIFO
+2025-04-22 17:27:42 INFO     Initializing Sniffle hardware interface
+2025-04-22 17:27:42 INFO     Starting capture
+2025-04-22 17:31:26 INFO     Opening capture output FIFO
+2025-04-22 17:31:26 INFO     Initializing Sniffle hardware interface
+2025-04-22 17:31:26 INFO     Starting capture
+2025-04-22 17:33:30 INFO     Opening capture output FIFO
+2025-04-22 17:33:30 INFO     Initializing Sniffle hardware interface
+2025-04-22 17:33:30 INFO     Starting capture
+2025-04-22 17:33:50 INFO     Capture stopped
+2025-04-22 17:35:40 INFO     Opening capture output FIFO
+2025-04-22 17:35:40 INFO     Initializing Sniffle hardware interface
+2025-04-22 17:35:40 INFO     Starting capture
